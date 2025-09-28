@@ -53,8 +53,20 @@
     }
   }
 
+  @media screen and (min-width: 1024px) {
+    width: 60%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 50%;
+  }
+
   @media screen and (max-width: 768px) {
     width: 100%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 90%;
   }
 }
 
@@ -121,10 +133,37 @@
     &:hover {
       background-color: #2430af;
     }
+
+    @media screen and (min-width: 1024px) {
+      padding: 0.75rem 1.5rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 1rem 2rem;
+    }
+
+    @media screen and (max-width: 480px) {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 60%;
+    margin: 2rem 2rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 50%;
+    margin: 3rem 2rem;
   }
 
   @media screen and (max-width: 768px) {
     width: 100%;
+    margin: 1rem 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 90%;
     margin: 1rem 0;
   }
 }

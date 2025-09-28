@@ -13,6 +13,22 @@
 
   margin: 4rem 0 2rem;
 
+  @media screen and (min-width: 1024px) {
+    margin: 4rem 0 4rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 4rem 0 5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 3rem 0 2rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin: 2rem 0 1rem;
+  }
+
   .app__work-filter-item {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
@@ -29,9 +45,25 @@
       color: #fff;
     }
 
+    @media screen and (min-width: 1024px) {
+      padding: 0.5rem 1rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 0.75rem 1.25rem;
+    }
+
     @media screen and (min-width: 2000px) {
       padding: 1rem 2rem;
       border-radius: 0.85rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 0.25rem 0.5rem;
+    }
+
+    @media screen and (max-width: 480px) {
+      padding: 0.25rem 0.5rem;
     }
   }
 
@@ -46,6 +78,26 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 480px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   .app__work-item {
     width: 270px;
@@ -70,6 +122,28 @@
       border-radius: 0.75rem;
     }
 
+    @media screen and (min-width: 1024px) {
+      width: 270px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 300px;
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 470px;
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 200px;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 150px;
+    }
+
     @media screen and (max-width: 300px) {
       width: 100%;
       margin: 1rem;
@@ -90,8 +164,24 @@
     object-fit: cover;
   }
 
+  @media screen and (min-width: 1024px) {
+    height: 150px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 180px;
+  }
+
   @media screen and (min-width: 2000px) {
     height: 350px;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 120px;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 100px;
   }
 }
 

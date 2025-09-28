@@ -23,12 +23,20 @@
 
   padding: 6rem 2rem 0rem;
 
+  @media screen and (min-width: 1024px) {
+    padding: 6rem 3rem 0rem;
+  }
+
   @media screen and (min-width: 2000px) {
     padding-top: 8rem;
   }
 
   @media screen and (max-width: 1200px) {
     flex-direction: column;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 5rem 1.5rem 0rem;
   }
 
   @media screen and (max-width: 450px) {
@@ -49,6 +57,10 @@
   @media screen and (max-width: 1200px) {
     width: 100%;
     margin-right: 0rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0 1rem;
   }
 }
 
@@ -92,6 +104,22 @@
   @media screen and (max-width: 1200px) {
     justify-content: flex-start;
     align-items: flex-start;
+  }
+
+  @media screen and (max-width: 768px) {
+    .badge-cmp,
+    .tag-cmp {
+      padding: 0.75rem 1.5rem;
+      margin-top: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .badge-cmp,
+    .tag-cmp {
+      padding: 0.5rem 1rem;
+      margin-top: 1.5rem;
+    }
   }
 }
 
@@ -161,6 +189,42 @@
 
     div {
       margin: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    div:nth-child(1) {
+      width: 80px;
+      height: 80px;
+    }
+
+    div:nth-child(2) {
+      margin: 1rem;
+      width: 120px;
+      height: 120px;
+    }
+
+    div:nth-child(3) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    div:nth-child(1) {
+      width: 70px;
+      height: 70px;
+    }
+
+    div:nth-child(2) {
+      margin: 0.75rem;
+      width: 100px;
+      height: 100px;
+    }
+
+    div:nth-child(3) {
+      width: 50px;
+      height: 50px;
     }
   }
 }
