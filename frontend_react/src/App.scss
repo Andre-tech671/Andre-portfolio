@@ -17,6 +17,7 @@
 
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .app__flex {
@@ -31,12 +32,16 @@
   flex-direction: column;
   padding: 4rem 2rem;
 
-  @media screen and (max-width: 768px) {
-    padding: 4rem 1.5rem;
+  @media screen and (max-width: 1024px) {
+    padding: 3rem 1.5rem;
   }
 
-  @media screen and (max-width: 450px) {
-    padding: 4rem 1rem 2rem;
+  @media screen and (max-width: 768px) {
+    padding: 3rem 1rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 2rem 1rem 1rem;
   }
 }
 
@@ -52,6 +57,11 @@
   p {
     text-transform: uppercase;
     color: var(--black-color);
+    font-size: 0.75rem;
+
+    @media screen and (max-width: 480px) {
+      font-size: 0.65rem;
+    }
   }
 }
 
@@ -74,12 +84,16 @@
     font-size: 4rem;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     font-size: 2.5rem;
   }
 
-  @media screen and (max-width: 450px) {
-    font-size: 2rem;
+  @media screen and (max-width: 768px) {
+    font-size: 2.25rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.75rem;
   }
 }
 
@@ -97,8 +111,16 @@
     font-size: 1.75rem;
   }
 
+  @media screen and (max-width: 1024px) {
+    font-size: 0.85rem;
+  }
+
   @media screen and (max-width: 768px) {
     font-size: 0.75rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.7rem;
   }
 }
 
@@ -116,12 +138,16 @@
     font-size: 2rem;
   }
 
+  @media screen and (max-width: 1024px) {
+    font-size: 1rem;
+  }
+
   @media screen and (max-width: 768px) {
     font-size: 0.95rem;
   }
 
-  @media screen and (max-width: 450px) {
-    font-size: 0.9rem;
+  @media screen and (max-width: 480px) {
+    font-size: 0.85rem;
   }
 }
 
@@ -171,6 +197,16 @@
       svg {
         width: 30px;
         height: 30px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 30px;
+      height: 30px;
+
+      svg {
+        width: 12px;
+        height: 12px;
       }
     }
   }
