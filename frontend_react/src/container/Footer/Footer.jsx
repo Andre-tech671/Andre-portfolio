@@ -28,7 +28,7 @@ const Footer = () => {
       to_email: 'nyanjahia@gmail.com',
     };
 
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID')
+    emailjs.send('service_3uki4dm', 'template_bkj8kta', templateParams, 'zZ41rmsTKlgd1uId_')
       .then((response) => {
         console.log('Email sent successfully!', response.status, response.text);
 
