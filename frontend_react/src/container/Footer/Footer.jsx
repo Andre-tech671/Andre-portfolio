@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -20,19 +21,41 @@ const Footer = () => {
   const handleSubmit = () => {
     setLoading(true);
 
-    const contact = {
-      _type: 'contact',
-      name: formData.username,
-      email: formData.email,
+    const templateParams = {
+      from_name: formData.username,
+      from_email: formData.email,
       message: formData.message,
+      to_email: 'nyanjahia@gmail.com',
     };
 
-    client.create(contact)
-      .then(() => {
-        setLoading(false);
-        setIsFormSubmitted(true);
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID')
+      .then((response) => {
+        console.log('Email sent successfully!', response.status, response.text);
+
+        const contact = {
+          _type: 'contact',
+          name: formData.username,
+          email: formData.email,
+          message: formData.message,
+        };
+
+        client.create(contact)
+          .then(() => {
+            setLoading(false);
+            setIsFormSubmitted(true);
+          })
+          .catch((err) => {
+            console.log('Sanity save failed:', err);
+            setLoading(false);
+            // Still show success since email was sent
+            setIsFormSubmitted(true);
+          });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log('Email send failed:', err);
+        setLoading(false);
+        alert('Failed to send message. Please try again.');
+      });
   };
 
   return (
@@ -42,7 +65,7 @@ const Footer = () => {
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
-          <a href="mailto:hello@micael.com" className="p-text">nyanjahia@gmail.com</a>
+          <a href="mailto:nyanjahia@gmail.com" className="p-text">nyanjahia@gmail.com</a>
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="phone" />
